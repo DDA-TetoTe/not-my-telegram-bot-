@@ -64,7 +64,7 @@ from telegram.ext import Application, CommandHandler, CallbackQueryHandler, Mess
 # ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠁⠀⠀⠀⠀⠀⠀⠀⢀⣽⣿⡇⠀⠀⠀⠠⢌⡐⠤⣀⠄⡀⢀⠀⣄⠠⠀⠀⠀⠀⣿⠱⣊⠖⡌⢦⡙⡔⣻⡄⠀⠀⠀⠀⡀⠄⢠⠀⡔⣠⢊⡕⡸⠆⠀⠀⠀⠀⢸⡷⣆⠀⠀⠀⠀⠀⠀⠀⠈⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 # ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⠟⠁⡀⠀⢨⡑⢮⡜⣧⢓⡮⣑⢮⡱⢎⡱⢡⢂⡆⢼⣿⢱⡘⣜⡘⠢⡜⡰⣹⢇⠰⣀⠎⡱⡌⢧⢣⡝⡴⢣⡳⢮⡵⣋⡄⠀⠀⠀⢸⣷⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 
-token = "7429008005:AAGdQD6-J_AYc8WQsWqiXB4g9rzmov4VsZI"
+token = "7429008005:AAGdQD6-J_AYc8WQsWqiXB4g9rzmov4VsZI" # This is not my token idk whos this token
 async def start(update: Update, context):
     await update.message.reply_text("Привет!")
     buttons = [
