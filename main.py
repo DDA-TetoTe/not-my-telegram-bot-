@@ -64,12 +64,12 @@ from telegram.ext import Application, CommandHandler, CallbackQueryHandler, Mess
 # ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠁⠀⠀⠀⠀⠀⠀⠀⢀⣽⣿⡇⠀⠀⠀⠠⢌⡐⠤⣀⠄⡀⢀⠀⣄⠠⠀⠀⠀⠀⣿⠱⣊⠖⡌⢦⡙⡔⣻⡄⠀⠀⠀⠀⡀⠄⢠⠀⡔⣠⢊⡕⡸⠆⠀⠀⠀⠀⢸⡷⣆⠀⠀⠀⠀⠀⠀⠀⠈⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 # ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⠟⠁⡀⠀⢨⡑⢮⡜⣧⢓⡮⣑⢮⡱⢎⡱⢡⢂⡆⢼⣿⢱⡘⣜⡘⠢⡜⡰⣹⢇⠰⣀⠎⡱⡌⢧⢣⡝⡴⢣⡳⢮⡵⣋⡄⠀⠀⠀⢸⣷⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 
-token = "7429008005:AAGdQD6-J_AYc8WQsWqiXB4g9rzmov4VsZI" # This is not my token idk whos this token
+token = "7390162097:AAFwvqeVsIj_iQgBtRT-u3A54q34pBh8xw4"
 async def start(update: Update, context):
     await update.message.reply_text("Привет!")
     buttons = [
         [InlineKeyboardButton("Анекдот",callback_data="joke")],
-        [InlineKeyboardButton("Факт о Python", callback_data="fact")],
+        [InlineKeyboardButton("Факт", callback_data="fact")],
         [InlineKeyboardButton("Музыка", callback_data="music")],
         [InlineKeyboardButton("Фото", callback_data="photo")],
     ]
@@ -80,18 +80,18 @@ async def button_click(update: Update, context):
     query = update.callback_query
     await query.answer()
     if query.data == "joke":
-        await query.message.reply_text("Употребляй зло, но не злоупотребляй!")
+        await query.message.reply_text("...")
     elif query.data == "fact":
-        await query.message.reply_text("Python был назван не в честь змеи, а в честь названия цирка")
+        await query.message.reply_text("BocchitheRock! – комедийное аниме, выпущенное студией CloverWorks осенью 2022 года. Сериал состоит из двенадцати серий, в основе сценария лежит четырехпанельная манга (ёнкома) за авторством Аки Хамаджи (Aki Hamaji).")
     elif query.data == "music":
-        await query.message.reply_text("Все топовые треки: ")
-        myMusic = ["ridonezz_sia-feat-sean-paul-cheap-thrills.mp3", "88Rising - Best Lover (feat. Bibi).mp3", "Brent_Morgan_-Gonna_Be_Okay(musmore.com).mp3", "Burak Yeter ft. Gerson Rafael - See You Again.mp3"]
+        await query.message.reply_text("треки: ")
+        myMusic = ["Seishun_Complex.mp3"]
         for music in myMusic:
             with open(music,"rb") as audio:
                 await query.message.reply_audio(audio)
     elif query.data == "photo":
         await query.message.reply_text("Рандомные фотки:")
-        myPhoto = ["https://gb.ru/blog/wp-content/uploads/2022/11/01-3.jpg.webp", "myPhoto.jpg"]
+        myPhoto = ["https://cdn.theouterhaven.net/wp-content/uploads/2022/10/bocchi-768x461-1.webp", "https://th.bing.com/th/id/OIP.7sfgRnmd8bJ_QCnxt4_YRgHaEK?rs=1&pid=ImgDetMain", "https://tvazteca.brightspotcdn.com/82/cc/5dc82e7648379ca9a4ef9b3f0665/bocchi-the-rock.jpg"]
         await query.message.reply_photo(random.choice(myPhoto))
 
 
